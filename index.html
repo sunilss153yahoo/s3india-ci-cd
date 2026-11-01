@@ -4,630 +4,386 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>  - Premium Web Hosting</title>
-<meta name="description" content="  provides fast, secure and reliable web hosting, VPS and cloud hosting services in India.">
-
+<title>S3India | Building Better Solutions</title>
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-    background: #080e1c;
-    color: #fff;
+  background: #ffffff;
+  color: #192B45;
 }
 
-header {
-    padding: 22px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #0c1528;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid #1d2b45;
+nav {
+  height: 80px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 18px #152c4810;
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #36d6ff;
+  font-size: 27px;
+  font-weight: 800;
+  color: #1757A6;
 }
 
-.logo span {
-    color: white;
+.logo span { color: #F0A33A; }
+
+nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
 }
 
 nav a {
-    color: #d4deef;
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 14px;
+  text-decoration: none;
+  color: #40516A;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-nav a:hover {
-    color: #36d6ff;
-}
+nav a:hover { color: #1765C1; }
 
 .btn {
-    display: inline-block;
-    background: #16bde8;
-    color: #06101c;
-    padding: 13px 24px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: .3s;
+  display: inline-block;
+  background: #1765C1;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
 }
 
 .btn:hover {
-    background: #fff;
-    transform: translateY(-3px);
+  background: #104D96;
+  transform: translateY(-2px);
 }
 
 .hero {
-    padding: 110px 8%;
-    text-align: center;
-    background:
-    radial-gradient(ellipse at top, #12365b, transparent 65%),
-    #080e1c;
+  padding: 110px 8%;
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(120deg,#F3F7FF,#FFFFFF);
 }
+
+.hero-content { max-width: 650px; }
 
 .tag {
-    color: #36d6ff;
-    border: 1px solid #245778;
-    padding: 9px 18px;
-    display: inline-block;
-    border-radius: 30px;
-    margin-bottom: 25px;
-    font-size: 13px;
+  color: #1765C1;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
 }
 
-.hero h1 {
-    font-size: clamp(38px, 6vw, 65px);
-    line-height: 1.15;
-    margin-bottom: 22px;
+h1 {
+  font-size: clamp(42px,6vw,66px);
+  line-height: 1.12;
+  margin: 22px 0;
+  color: #172D4B;
 }
 
-.hero h1 span {
-    color: #36d6ff;
-}
+h1 span { color: #1765C1; }
 
 .hero p {
-    color: #a9b8cf;
-    max-width: 650px;
-    margin: auto;
-    line-height: 1.8;
-    font-size: 17px;
+  color: #65758B;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 30px;
 }
 
-.hero .btn {
-    margin-top: 32px;
-}
-
-.domain {
-    max-width: 750px;
-    margin: 45px auto 0;
-    background: #101e33;
-    border: 1px solid #263d5d;
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-}
-
-.domain input {
-    flex: 1;
-    min-width: 0;
-    padding: 15px;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: white;
-    font-size: 16px;
-}
-
-.domain button {
-    border: none;
-    cursor: pointer;
-}
-
-#domainResult {
-    margin-top: 15px;
-    color: #36d6ff;
-}
-
-section {
-    padding: 85px 8%;
-}
+section { padding: 90px 8%; }
 
 .section-title {
-    text-align: center;
-    margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 48px;
 }
 
 .section-title h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
+  font-size: 36px;
+  margin-bottom: 12px;
 }
 
-.section-title p {
-    color: #9eacc2;
-    line-height: 1.7;
+.section-title p { color: #78879A; }
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
-.services, .pricing, .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 22px;
+.about-image {
+  min-height: 350px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,#E5EEFC,#C9DCF7);
+  display: grid;
+  place-items: center;
+  color: #1765C1;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.about-text h2 {
+  font-size: 35px;
+  margin: 18px 0;
+}
+
+.about-text p {
+  color: #68788D;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+.services { background: #F7F9FC; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
 }
 
 .card {
-    background: #101b2d;
-    padding: 30px;
-    border: 1px solid #21334d;
-    border-radius: 12px;
-    transition: .3s;
+  background: white;
+  padding: 32px;
+  border-radius: 14px;
+  border: 1px solid #E9EEF5;
+  transition: .3s;
 }
 
 .card:hover {
-    transform: translateY(-7px);
-    border-color: #36d6ff;
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px #193b6414;
 }
 
 .card .icon {
-    font-size: 36px;
-    margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .card h3 {
-    margin-bottom: 14px;
-    font-size: 21px;
+  font-size: 20px;
+  margin-bottom: 14px;
 }
 
 .card p {
-    color: #a5b3c8;
-    line-height: 1.7;
-    font-size: 14px;
+  color: #718096;
+  line-height: 1.8;
+  font-size: 14px;
 }
 
-.price {
-    font-size: 32px;
-    color: #36d6ff;
-    margin: 20px 0;
-    font-weight: bold;
+.why {
+  text-align: center;
+  background: #fff;
 }
 
-.price small {
-    color: #a5b3c8;
-    font-size: 13px;
-    font-weight: normal;
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+  margin-top: 40px;
 }
 
-.card ul {
-    list-style: none;
-    margin: 25px 0;
+.stat {
+  padding: 30px;
+  background: #F5F8FD;
+  border-radius: 12px;
 }
 
-.card li {
-    color: #c3cede;
-    margin: 15px 0;
-    font-size: 14px;
+.stat h3 {
+  font-size: 35px;
+  color: #1765C1;
 }
 
-.card li::before {
-    content: "✓ ";
-    color: #36d6ff;
-    font-weight: bold;
+.stat p {
+  color: #718096;
+  margin-top: 8px;
 }
 
-.popular {
-    border: 1px solid #36d6ff;
-    position: relative;
+.contact {
+  background: #F5F8FD;
 }
 
-.popular-label {
-    background: #16bde8;
-    color: #06101c;
-    padding: 7px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    display: inline-block;
-    margin-bottom: 15px;
+.contact-box {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px #1b355510;
 }
 
-.features-section {
-    background: #0d1728;
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 18px;
+  border: 1px solid #DFE6EF;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
 }
 
-.cta {
-    margin: 50px 8%;
-    padding: 65px 25px;
-    text-align: center;
-    background: linear-gradient(120deg, #075078, #123c72);
-    border-radius: 15px;
+input:focus, textarea:focus {
+  border-color: #1765C1;
 }
 
-.cta h2 {
-    font-size: 34px;
-    margin-bottom: 15px;
-}
-
-.cta p {
-    color: #d1e8f5;
-    margin-bottom: 25px;
-    line-height: 1.7;
-}
-
-.faq {
-    max-width: 800px;
-    margin: auto;
-}
-
-details {
-    background: #101b2d;
-    padding: 22px;
-    margin-bottom: 12px;
-    border-radius: 8px;
-    border: 1px solid #24344d;
-}
-
-summary {
-    cursor: pointer;
-    font-weight: bold;
-}
-
-details p {
-    color: #a5b3c8;
-    margin-top: 15px;
-    line-height: 1.7;
-}
+textarea { height: 130px; resize: vertical; }
 
 footer {
-    background: #050a13;
-    padding: 55px 8% 25px;
-    border-top: 1px solid #1d2b45;
+  padding: 35px 8%;
+  text-align: center;
+  color: #8491A2;
+  font-size: 14px;
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 35px;
-}
+footer strong { color: #1765C1; }
 
-footer h3 {
-    color: #36d6ff;
-    margin-bottom: 18px;
-}
-
-footer p, footer a {
-    color: #a5b3c8;
-    text-decoration: none;
-    display: block;
-    margin: 12px 0;
-    font-size: 14px;
-}
-
-.copyright {
-    border-top: 1px solid #1d2b45;
-    text-align: center;
-    padding-top: 25px;
-    margin-top: 40px;
-    color: #8290a5;
-    font-size: 13px;
-}
-
-.whatsapp {
-    position: fixed;
-    right: 22px;
-    bottom: 22px;
-    background: #20c96b;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: bold;
-    z-index: 99;
-}
-
-@media(max-width: 768px) {
-    header {
-        flex-wrap: wrap;
-        gap: 18px;
-    }
-
-    nav {
-        display: none;
-        width: 100%;
-    }
-
-    nav.active {
-        display: flex;
-        flex-direction: column;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-
-    .domain {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .domain input {
-        width: 100%;
-    }
-
-    .hero {
-        padding: 75px 6%;
-    }
-
-    section {
-        padding: 65px 6%;
-    }
+@media(max-width:800px) {
+  nav { padding: 0 5%; }
+  nav ul { display: none; }
+  .hero { padding: 85px 7%; }
+  section { padding: 65px 7%; }
+  .about { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
+  .contact-box { padding: 25px; }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">S3<span>INDIA</span></div>
-
-    <nav id="nav">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#features">Why Us</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <a href="#pricing" class="btn">Get Started</a>
-    <button onclick="toggleMenu()" style="background:none;color:white;border:0;font-size:25px;cursor:pointer">☰</button>
-</header>
+<nav>
+  <div class="logo">S3<span>India</span></div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="btn">Get in Touch</a>
+</nav>
 
 <div class="hero" id="home">
-    <div class="tag">🚀 NEXT GENERATION WEB HOSTING</div>
-
-    <h1>Power Your Website<br>With <span></span></h1>
-
+  <div class="hero-content">
+    <div class="tag">WELCOME TO S3INDIA</div>
+    <h1>Building Ideas.<br>
+      Creating <span>Impact.</span>
+    </h1>
     <p>
-        Experience lightning-fast hosting, enterprise-grade security
-        and 99.9% uptime. Everything you need to grow your online business.
+      Discover smarter solutions, meaningful innovation
+      and a better way to move your business forward.
+      Welcome to S3India.
     </p>
-
-    <a href="#pricing" class="btn">Explore Hosting Plans →</a>
-
-    <div class="domain">
-        <input type="text" id="domainInput"
-        placeholder="Enter your domain name (example.com)">
-        <button class="btn" onclick="searchDomain()">Search Domain</button>
-    </div>
-    <div id="domainResult"></div>
+    <a href="#about" class="btn">Discover More →</a>
+  </div>
 </div>
 
-<section id="services">
-    <div class="section-title">
-        <h2>Our Hosting Services</h2>
-        <p>Powerful hosting solutions for every business.</p>
+<section id="about">
+  <div class="about">
+    <div class="about-image">S3 INDIA</div>
+    <div class="about-text">
+      <div class="tag">WHO WE ARE</div>
+      <h2>About S3India</h2>
+      <p>
+        S3India is committed to delivering quality,
+        innovation and reliable solutions. Our focus
+        is on building lasting relationships and
+        creating meaningful value for our customers.
+      </p>
+      <a href="#contact" class="btn">Know More</a>
     </div>
-
-    <div class="services">
-        <div class="card">
-            <div class="icon">🌐</div>
-            <h3>Shared Hosting</h3>
-            <p>Affordable and reliable web hosting for blogs, startups and business websites.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon">⚡</div>
-            <h3>VPS Hosting</h3>
-            <p>Powerful virtual private servers with dedicated resources and complete flexibility.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon">☁️</div>
-            <h3>Cloud Hosting</h3>
-            <p>Scalable cloud infrastructure for high performance and growing businesses.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon">🖥️</div>
-            <h3>Dedicated Servers</h3>
-            <p>Maximum power, security and performance with dedicated server resources.</p>
-        </div>
-    </div>
+  </div>
 </section>
 
-<section id="pricing" class="features-section">
-    <div class="section-title">
-        <h2>Affordable Hosting Plans</h2>
-        <p>Choose the perfect plan for your website.</p>
+<section class="services" id="services">
+  <div class="section-title">
+    <div class="tag">WHAT WE DO</div>
+    <h2>Our Services</h2>
+    <p>Solutions designed to make a difference.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">✦</div>
+      <h3>Quality Solutions</h3>
+      <p>Reliable and effective solutions tailored to customer needs.</p>
     </div>
 
-    <div class="pricing">
-        <div class="card">
-            <h3>Starter</h3>
-            <p>Perfect for personal websites.</p>
-            <div class="price">₹99 <small>/month</small></div>
-            <ul>
-                <li>1 Website</li>
-                <li>10 GB SSD Storage</li>
-                <li>Free SSL</li>
-                <li>Free Control Panel</li>
-                <li>24/7 Support</li>
-            </ul>
-            <a href="#contact" class="btn">Order Now</a>
-        </div>
-
-        <div class="card popular">
-            <div class="popular-label">MOST POPULAR</div>
-            <h3>Business</h3>
-            <p>Best for growing businesses.</p>
-            <div class="price">₹249 <small>/month</small></div>
-            <ul>
-                <li>Unlimited Websites*</li>
-                <li>50 GB SSD Storage</li>
-                <li>Free SSL</li>
-                <li>Free Backups</li>
-                <li>Priority Support</li>
-            </ul>
-            <a href="#contact" class="btn">Order Now</a>
-        </div>
-
-        <div class="card">
-            <h3>Professional</h3>
-            <p>For high-traffic websites.</p>
-            <div class="price">₹499 <small>/month</small></div>
-            <ul>
-                <li>Unlimited Websites*</li>
-                <li>100 GB SSD Storage</li>
-                <li>Free SSL</li>
-                <li>Daily Backups</li>
-                <li>Premium Support</li>
-            </ul>
-            <a href="#contact" class="btn">Order Now</a>
-        </div>
+    <div class="card">
+      <div class="icon">◇</div>
+      <h3>Innovation</h3>
+      <p>Modern ideas and forward-thinking approaches for growth.</p>
     </div>
-    <p style="color:#8999ad;font-size:12px;margin-top:20px">*Subject to fair usage and server resource limits. Sample pricing; confirm actual plans before publishing.</p>
+
+    <div class="card">
+      <div class="icon">◎</div>
+      <h3>Customer Support</h3>
+      <p>Building trust through responsive and dependable support.</p>
+    </div>
+  </div>
 </section>
 
-<section id="features">
-    <div class="section-title">
-        <h2>Why Choose ?</h2>
-        <p>We make hosting simple, fast and secure.</p>
+<section class="why" id="why">
+  <div class="section-title">
+    <div class="tag">WHY S3INDIA</div>
+    <h2>Our Commitment</h2>
+    <p>Creating value through quality, trust and dedication.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <h3>01</h3>
+      <p>Quality First</p>
     </div>
-
-    <div class="features">
-        <div class="card">
-            <div class="icon">🚀</div>
-            <h3>High Performance</h3>
-            <p>Optimized servers for faster loading speeds.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon">🔒</div>
-            <h3>Advanced Security</h3>
-            <p>Security-focused hosting infrastructure and SSL support.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon">🕒</div>
-            <h3>24/7 Support</h3>
-            <p>Get assistance whenever you need it.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon">💯</div>
-            <h3>99.9% Uptime Goal</h3>
-            <p>Reliable infrastructure designed to keep your website online.</p>
-        </div>
+    <div class="stat">
+      <h3>02</h3>
+      <p>Customer Focus</p>
     </div>
+    <div class="stat">
+      <h3>03</h3>
+      <p>Continuous Growth</p>
+    </div>
+  </div>
 </section>
 
-<div class="cta">
-    <h2>Ready to Launch Your Website?</h2>
-    <p>Get started with  today and take your business online.</p>
-    <a href="#contact" class="btn">Start Your Journey →</a>
-</div>
+<section class="contact" id="contact">
+  <div class="section-title">
+    <div class="tag">LET'S CONNECT</div>
+    <h2>Get in Touch</h2>
+    <p>Have a question? We'd love to hear from you.</p>
+  </div>
 
-<section>
-    <div class="section-title">
-        <h2>Frequently Asked Questions</h2>
-        <p>Everything you need to know about our hosting.</p>
-    </div>
-
-    <div class="faq">
-        <details>
-            <summary>What is web hosting?</summary>
-            <p>Web hosting is a service that stores your website files on a server and makes your website accessible on the internet.</p>
-        </details>
-
-        <details>
-            <summary>Do you provide free SSL?</summary>
-            <p>Free SSL is included in the sample hosting plans shown above, subject to the final hosting package.</p>
-        </details>
-
-        <details>
-            <summary>Can I upgrade my hosting plan?</summary>
-            <p>Yes. You can upgrade your hosting resources as your website grows, depending on available plans.</p>
-        </details>
-
-        <details>
-            <summary>Do you provide customer support?</summary>
-            <p>Our planned support service is available 24/7 to assist customers with hosting-related questions.</p>
-        </details>
-    </div>
+  <form class="contact-box"
+    onsubmit="event.preventDefault(); alert('Please connect this form to your email or backend to receive messages.');">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="tel" placeholder="Phone Number">
+    <textarea placeholder="Tell us about your requirements"
+      required></textarea>
+    <button class="btn" type="submit"
+      style="border:0;cursor:pointer;">
+      Send Message →
+    </button>
+  </form>
 </section>
 
-<footer id="contact">
-    <div class="footer-content">
-        <div>
-            <div class="logo">S3<span>INDIA</span></div>
-            <p>Reliable hosting. Powerful performance. Your online success starts here.</p>
-        </div>
-
-        <div>
-            <h3>Quick Links</h3>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#features">About Us</a>
-        </div>
-
-        <div>
-            <h3>Our Services</h3>
-            <a href="#services">Shared Hosting</a>
-            <a href="#services">VPS Hosting</a>
-            <a href="#services">Cloud Hosting</a>
-            <a href="#services">Dedicated Servers</a>
-        </div>
-
-        <div>
-            <h3>Contact Us</h3>
-            <p>Email: support@.in</p>
-            <p>Website: www..in</p>
-            <p>India</p>
-        </div>
-    </div>
-
-    <div class="copyright">
-        © 2026 . All Rights Reserved.
-    </div>
+<footer>
+  © 2026 <strong>S3India</strong>. All Rights Reserved.
 </footer>
-
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp" target="_blank">
-    WhatsApp Us
-</a>
-
-<script>
-function toggleMenu() {
-    document.getElementById("nav").classList.toggle("active");
-}
-
-function searchDomain() {
-    const domain = document.getElementById("domainInput").value.trim();
-    const result = document.getElementById("domainResult");
-
-    if (!domain) {
-        result.textContent = "Please enter a domain name.";
-        return;
-    }
-
-    if (!/^(?!-)[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+$/.test(domain)) {
-        result.textContent = "Please enter a valid domain, e.g. example.com";
-        return;
-    }
-
-    result.textContent = "Domain entered: " + domain +
-        ". Connect a domain registrar API to check availability.";
-}
-</script>
 
 </body>
 </html>
